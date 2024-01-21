@@ -18,7 +18,7 @@ export default function Slider() {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 25000,
+          delay: 2000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -29,21 +29,21 @@ export default function Slider() {
         className="banner_slider"
       >
         {
-            slides.map((slide, i)=>(
-                <Fragment key={i}>
-                    <SwiperSlide className='rounded-md overflow-hidden'>
-                        <BlurImage src={slide} alt="Slide Image" />
-                    </SwiperSlide>
-                </Fragment>
-            ))
+          slides.map((slide, i) => (
+            <Fragment key={i}>
+              <SwiperSlide className='rounded-md overflow-hidden'>
+                <BlurImage src={slide} alt="Slide Image" />
+              </SwiperSlide>
+            </Fragment>
+          ))
         }
       </Swiper>
     </>
   );
 }
 
-const slides=[
-    '/slides/slide1.webp',
-    '/slides/2.jpg',
-    '/slides/3.jpg',
+const slides = [
+  '/slides/3.jpg',
+  '/slides/slide1.webp',
+  '/slides/2.jpg',
 ]
