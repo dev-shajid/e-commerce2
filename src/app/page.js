@@ -1,113 +1,196 @@
-import Image from "next/image";
+import Categories from "@/components/Categories";
+import Products from "@/components/Products";
+import Slider from "@/components/Slider";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+    <main className="container">
+      <Slider />
+      <Categories />
+      <Products products={dawahProducts} title="DAWAH CANVAS" tag="dawah" />
+      <Products products={attarProducts} title="ATTAR" tag="borka" />
+      <Products products={jersyProducts} title="JERSY" tag="borka" />
+      <Products products={borkaProducts} title="BORKA" tag="borka" />
     </main>
   );
 }
+
+const dawahProducts = [
+  {
+    image: "/books/1.webp",
+    title: "Wall Frame-Cholo Rober Kache-WF012",
+    oldPrice: 790,
+    price: 550,
+    rating: "4"
+  },
+  {
+    image: "/books/2.webp",
+    title: "Wall Frame-Bismillah-WF001",
+    oldPrice: 790,
+    price: 550,
+    rating: "4"
+  },
+  {
+    image: "/books/3.webp",
+    title: "Wall Frame-Amader Paotaka-WF018",
+    oldPrice: 790,
+    price: 550,
+    rating: "4"
+  },
+  {
+    image: "/books/4.webp",
+    title: "Wall Frame-Allahu Akbar-WF003",
+    oldPrice: 790,
+    price: 550,
+    rating: "4"
+  },
+  {
+    image: "/books/5.webp",
+    title: "Wall Frame-Alhamdulillah-WF002",
+    oldPrice: 790,
+    price: 550,
+    rating: "4"
+  },
+  {
+    image: "/books/6.webp",
+    title: "Wall Frame-Alhamdulillah Calligraphy-WF016",
+    oldPrice: 790,
+    price: 550,
+    rating: "4"
+  }
+]
+
+const attarProducts = [
+  {
+    image: "/attar/1.webp",
+    title: "Arabian Oud - 6 ml (Crystal)",
+    oldPrice: 1200,
+    price: 720,
+    rating: "4.5"
+  },
+  {
+    image: "/attar/2.jpg",
+    title: "Kasturi - 100 ml",
+    oldPrice: 1200,
+    price: 720,
+    rating: "4.5"
+  },
+  {
+    image: "/attar/3.webp",
+    title: "Amir Al Oud - 6 ml (Crystal)",
+    oldPrice: 1200,
+    price: 720,
+    rating: "4.5"
+  },
+  {
+    image: "/attar/4.webp",
+    title: "Escada Collection - 6 ml (Crystal)",
+    oldPrice: 1200,
+    price: 720,
+    rating: "4.5"
+  },
+  {
+    image: "/attar/5.webp",
+    title: "Escada Collection - 6 ml (Crystal)",
+    oldPrice: 1200,
+    price: 720,
+    rating: "4.5"
+  },
+  {
+    image: "/attar/6.jpg",
+    title: "Silver - 100 ml",
+    oldPrice: 1200,
+    price: 720,
+    rating: "4.5"
+  },
+]
+
+const jersyProducts = [
+  {
+    image: "/jersy/1.jpg",
+    title: "Dawah Jersey - Islam for Better Life - 616",
+    oldPrice: 2100,
+    price: 1600,
+    rating: "4.5"
+  },
+  {
+    image: "/jersy/2.jpg",
+    title: "Dawah Jersey - Never Give Up - 617",
+    oldPrice: 2100,
+    price: 1600,
+    rating: "4.5"
+  },
+  {
+    image: "/jersy/3.jpg",
+    title: "Dawah Jersey - Badr - 602",
+    oldPrice: 2100,
+    price: 1600,
+    rating: "4.5"
+  },
+  {
+    image: "/jersy/4.jpg",
+    title: "Dawah Jersey - Being Muslim - 618",
+    oldPrice: 2100,
+    price: 1600,
+    rating: "4.5"
+  },
+  {
+    image: "/jersy/5.jpg",
+    title: "Dawah Jersey - Come to Deen - 610",
+    oldPrice: 2100,
+    price: 1600,
+    rating: "4.5"
+  },
+  {
+    image: "/jersy/6.webp",
+    title: "Dawah Jersey - মুসাফির - 628",
+    oldPrice: 2100,
+    price: 1600,
+    rating: "4.5"
+  },
+]
+
+const borkaProducts = [
+  {
+    image: "/borka/1.jpg",
+    title: "Mysori Abaya",
+    oldPrice: 2100,
+    price: 1600,
+    rating: "3.5"
+  },
+  {
+    image: "/borka/2.webp",
+    title: "Simple Borka (Mocha)",
+    oldPrice: 2100,
+    price: 1600,
+    rating: "3.5"
+  },
+  {
+    image: "/borka/3.jpg",
+    title: "Butterfly Hoodie Niqab",
+    oldPrice: 2100,
+    price: 1600,
+    rating: "3.5"
+  },
+  {
+    image: "/borka/4.jpg",
+    title: "Awrah Abaya",
+    oldPrice: 2100,
+    price: 1600,
+    rating: "3.5"
+  },
+  {
+    image: "/borka/5.jpg",
+    title: "Ayesha Borka",
+    oldPrice: 2100,
+    price: 1600,
+    rating: "3.5"
+  },
+  {
+    image: "/borka/6.jpg",
+    title: "Plain Borka",
+    oldPrice: 2100,
+    price: 1600,
+    rating: "3.5"
+  },
+]
