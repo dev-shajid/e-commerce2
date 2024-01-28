@@ -25,7 +25,7 @@ export default function useApi() {
                 toast.error(res?.response?.data?.error || "Some error arised", { id: loadingPromise })
             }
         } catch (error) {
-            console.log(error?.response?.data)
+            console.log(error)
             return error?.response?.data
         }
         finally {
