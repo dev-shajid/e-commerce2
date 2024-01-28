@@ -1,9 +1,14 @@
+'use client'
+
 import { Avatar, Badge, Button } from '@nextui-org/react'
 import { CiShoppingCart, CiUser } from "react-icons/ci";
 import React from 'react'
 import Link from 'next/link';
+import useApi from '@/hook/useApi';
 
 export default function Nav() {
+    const { apiLogout, isLoading } = useApi()
+
     return (
         <header className='py-4 shadow-md dark:bg-dark dark:text-white border-b border-gray-200 dark:border-gray-800'>
             <div className="container flex flex-wrap justify-between items-center gap-2">
@@ -24,6 +29,9 @@ export default function Nav() {
                     <Button href='/signin' as={Link} variant='bordered' className='border-1 hover:bg-light-2 hover:dark:bg-dark-2 border-blight-1 dark:border-bdark-1 rounded-md sm:min-w-unit-20 sm:px-unit-md min-w-unit-10 px-0'>
                         <CiUser className='text-2xl !m-0' />
                         <p className='hidden sm:block'>Sign In</p>
+                    </Button>
+                    <Button isLoading={isLoading} onClick={apiLogout} variant='bordered' className='border-1 hover:bg-light-2 hover:dark:bg-dark-2 border-blight-1 dark:border-bdark-1 rounded-md sm:min-w-unit-20 sm:px-unit-md min-w-unit-10 px-0'>
+                        <p className='hidden sm:block'>Logout</p>
                     </Button>
                     <Button href='/profile' isIconOnly className='rounded-full bg-none border border-blight-1 dark:border-bdark-1' as={Link}>
                         <Avatar showFallback name='Jane' src='https://images.unsplash.com/photo-1531891437562-4301cf35b7e4?q=80&w=2864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' />

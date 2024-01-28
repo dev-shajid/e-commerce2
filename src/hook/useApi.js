@@ -25,8 +25,8 @@ export default function useApi() {
                 toast.error(res?.response?.data?.error || "Some error arised", { id: loadingPromise })
             }
         } catch (error) {
-            console.log(error.response.data)
-            return error.response.data
+            console.log(error?.response?.data)
+            return error?.response?.data
         }
         finally {
             setIsLoading(false)
@@ -34,6 +34,7 @@ export default function useApi() {
     }
 
     async function apiRegister(credentials, e) {
+        let loadingPromise = toast.loading("Loading...")
         e.preventDefault()
         try {
             setIsLoading(true)
@@ -46,8 +47,8 @@ export default function useApi() {
             }
 
         } catch (error) {
-            console.log(error.response.data)
-            return error.response.data
+            console.log(error?.response?.data)
+            return error?.response?.data
         }
         finally {
             setIsLoading(false)
@@ -55,13 +56,20 @@ export default function useApi() {
     }
 
     async function apiLogout() {
+        let loadingPromise = toast.loading("Loading...")
         try {
             setIsLoading(true)
-            const res = await axios.get('/api/auth/register')
+            const res = await axios.get('https://shajid-store.vercel.app/api/auth/logout')
+            if (res.status == 200) {
+                toast.success(res.data.message, { id: loadingPromise })
+                router.push('/')
+            } else {
+                toast.error(res?.response?.data?.error || "Some error arised", { id: loadingPromise })
+            }
 
-            return res
         } catch (error) {
-            throw new Error(error)
+            console.log(error?.response?.data)
+            return error?.response?.data
         }
         finally {
             setIsLoading(false)
