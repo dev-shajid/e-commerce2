@@ -26,16 +26,16 @@ export default function Categories() {
             >
                 {
                     categories.map((slide, i) => (
-                        <Fragment key={i}>
-                            <SwiperSlide className='rounded-md overflow-hidden'>
-                                <div className='flex flex-col p-2 items-center justify-around border border-light-1 text-black'>
+                        // <>
+                            <SwiperSlide key={i} className='rounded-md overflow-hidden'>
+                                <div className='flex flex-col p-2 items-center overflow-hidden justify-around border border-blight-1 dark:border-bdark-1 rounded-md'>
                                     <div className='w-[90px] aspect-square'>
                                         <BlurImage className='hidden' src={slide.image} alt={slide.name} />
                                     </div>
                                     <p className='text-sm mt-1 font-medium'>{slide.name}</p>
                                 </div>
                             </SwiperSlide>
-                        </Fragment>
+                        // </>
                     ))
                 }
             </Swiper>

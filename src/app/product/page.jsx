@@ -10,12 +10,14 @@ import ProductQuantity from '@/components/ProductQuantity';
 export default async function Product() {
     return (
         <section className='container space-y-8'>
-            <div className='flex flex-col md:flex-row justify-center gap-4 mt-8 p-4 md:p-8 border border-light-1 rounded-md shadow-md'>
+            <div className='flex flex-col md:flex-row justify-center gap-4 mt-8 p-4 md:p-8 border border-blight-1 dark:border-bdark-1 rounded-md shadow-md'>
                 <div className="flex-1 flex justify-center items-center">
-                    <BlurImage
-                        src={'/jersy/1.jpg'}
-                        alt={'Title'}
-                    />
+                    <div className='overflow-hidden rounded-md'>
+                        <BlurImage
+                            src={'/jersy/1.jpg'}
+                            alt={'Title'}
+                        />
+                    </div>
                 </div>
                 <div className="flex-1 space-y-4">
                     <div>
@@ -34,7 +36,7 @@ export default async function Product() {
                     <ProductSize />
                     <ProductQuantity />
 
-                    <Button className='rounded-md font-medium px-6 bg-gray-800' color='primary'>
+                    <Button className='rounded-md font-medium px-6 bg-gray-800 dark:bg-gray-700' variant='solid'>
                         Add to Cart
                     </Button>
 
@@ -52,7 +54,7 @@ export default async function Product() {
             </div>
 
 
-            <div className='p-4 md:p-8 border border-light-1 rounded-md shadow-md'>
+            <div className='p-4 md:p-8 border border-blight-1 dark:border-bdark-1 rounded-md shadow-md'>
                 <div className="title">Description</div>
                 <div className='mt-4'>
                     <p>⭕ স্পেশাল দাওয়াহ কম্বো⭕</p>

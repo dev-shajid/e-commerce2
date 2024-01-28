@@ -14,7 +14,7 @@ export default function ProductQuantity() {
                 </Button>
                 <input
                     type='text'
-                    className='max-w-[40px] h-[40px] border outline-none bg-[#D4D4D8] text-center'
+                    className='max-w-[40px] h-[40px] bordser outline-none bg-[#D4D4D8] dark:bg-[#3F3F45] text-center'
                     value={value}
                     onChange={(e) => {
                         let x = e.target.value

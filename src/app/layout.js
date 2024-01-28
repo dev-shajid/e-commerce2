@@ -3,6 +3,7 @@ import "./globals.css";
 import NextUiProvider from "@/components/NextUiProvider";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,11 +15,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} dark`}>
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+        />
         <NextUiProvider>
-          <Nav />
-          {children}
-          <Footer/>
+          <main className="dark:bg-dark bg-light min-h-[100vh] flex flex-col justify-between">
+            <Nav />
+            {children}
+            <Footer />
+          </main>
         </NextUiProvider>
       </body>
     </html>

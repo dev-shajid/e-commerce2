@@ -2,6 +2,7 @@ import BlurImage from '@/components/BlurImage';
 import ProductQuantity from '@/components/ProductQuantity';
 import { Button } from '@nextui-org/react';
 import React from 'react'
+import { FaPen } from 'react-icons/fa';
 import { RxCross2 } from "react-icons/rx";
 
 export default async function Cart() {
@@ -12,7 +13,7 @@ export default async function Cart() {
                 <div className="rounded-lg w-full space-y-2">
                     {
                         [1, 2, 3].map((product, i) => (
-                            <div className='rounded-md flex items-center gap-4 bg-white px-4 py-2 shadow-md'>
+                            <div className='rounded-md flex items-center gap-4 bg-light dark:bg-dark-2 px-4 py-2 shadow-md'>
                                 <div className='max-w-[80px] rounded-md overflow-hidden'>
                                     <BlurImage src="/jersy/1.jpg" alt="product-image" className="" />
                                 </div>
@@ -36,16 +37,29 @@ export default async function Cart() {
                 </div>
 
 
-                <div className="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 lg:max-w-[350px] md:max-w-[300px] w-full">
+                <div className="mt-6 h-full text-sm rounded-lg border border-blight-1 dark:border-bdark-1 bg-light dark:bg-dark-2 p-6 shadow-md md:mt-0 lg:max-w-[350px] md:max-w-[300px] w-full">
+
+                    {/* Delivary Address */}
+                    <p className=''>Delivery Address</p>
+                    <div className='flex justify-between items-start p-3 mb-4 text-sm rounded-md  bg-gray-300 dark:bg-gray-700 border border-blight-1 dark:border-bdark-1'>
+                        <div className='flex-1'>
+                            <div className='font-semibold'>Mohammed Sajidul Islam</div>
+                            <div>01879904234</div>
+                            <div>86876, Raozan Upazila, Bangladesh, Raozan, Chattogram, Chittagong</div>
+                        </div>
+                        <FaPen className='cursor-pointer'/>
+                    </div>
+                    {/* Delivary Address */}
+
                     <div className="mb-2 flex justify-between">
-                        <p className="text-gray-700">Subtotal</p>
-                        <p className="text-gray-700">৳129.99</p>
+                        <p className="text-gray-700 dark:text-gray-300">Subtotal</p>
+                        <p className="text-gray-700 dark:text-gray-300">৳129.99</p>
                     </div>
                     <div className="flex justify-between">
-                        <p className="text-gray-700">Shipping</p>
-                        <p className="text-gray-700">৳4.99</p>
+                        <p className="text-gray-700 dark:text-gray-300">Shipping</p>
+                        <p className="text-gray-700 dark:text-gray-300">৳4.99</p>
                     </div>
-                    <hr className="my-4" />
+                    <hr className="my-4 border-blight-2 dark:border-bdark-2" />
                     <div className="flex justify-between">
                         <p className="text-lg font-bold">Total</p>
                         <div className="">

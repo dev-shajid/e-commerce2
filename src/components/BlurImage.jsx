@@ -6,7 +6,7 @@ import React, { useState } from 'react'
 export default function BlurImage({ src, alt, className, id = 0 }) {
     const [loading, setLoading] = useState(true)
     return (
-        <div className=' h-full w-full'>
+        <div className=' h-full w-full overflow-hidden'>
             <Image
                 src={src}
                 alt={alt}

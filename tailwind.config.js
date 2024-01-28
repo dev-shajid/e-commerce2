@@ -20,20 +20,22 @@ module.exports = {
     extend: {
       colors: {
         light: {
-          1: '#e7e7e7',
-          2: '#f6faff',
+          DEFAULT: '#f6f6f6',
+          1: '#f6f6f6',
+          2: '#e6e6e6',
         },
         dark: {
-          1: '#0a1127',
-          2: '#161c35',
+          DEFAULT: '#151a22',
+          1: '#151a22',
+          2: '#1c2431',
         },
         "blight": {
-          1: '#00000025',
-          2: '#00000040',
+          1: '#d8d8d8',
+          2: '#c0c0c0',
         },
         "bdark": {
-          1: '#ffffff25',
-          2: '#ffffff45',
+          1: '#4c4c4c',
+          2: '#5e5e5e',
         }
       },
       animation: {

@@ -31,7 +31,7 @@ export default function Slider() {
         {
           slides.map((slide, i) => (
             <Fragment key={i}>
-              <SwiperSlide className='rounded-md overflow-hidden'>
+              <SwiperSlide key={i} className='rounded-md overflow-hidden'>
                 <BlurImage src={slide} alt="Slide Image" />
               </SwiperSlide>
             </Fragment>
