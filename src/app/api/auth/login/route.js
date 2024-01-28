@@ -3,11 +3,11 @@ import { NextResponse } from "next/server";
 import bcryptjs from "bcryptjs";
 import jwt from "jsonwebtoken";
 import * as jose from 'jose'
-import connect from "@/db/dbConfig";
+import db from "@/lib/db";
 
 export async function POST(req) {
     try {
-        await connect()
+        await db.connect()
         const { email, password } = await req.json()
         console.log({ email, password })
         const user = await User.findOne({ email })
@@ -35,7 +35,7 @@ export async function POST(req) {
             success: true,
         })
         response.cookies.set("token", token, {
-            httpOnly: true,
+            // httpOnly: true,
         })
         return response;
     } catch (error) {

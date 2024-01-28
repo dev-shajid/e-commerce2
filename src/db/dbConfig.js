@@ -11,7 +11,7 @@ export default async function connect() {
 
         connection.on('error', (err) => {
             console.log('MongoDB connection error. Please make sure MongoDB is running. ' + err);
-            process.exit();
+            process.exit()
         })
 
     } catch (error) {
@@ -19,8 +19,6 @@ export default async function connect() {
         console.log(error);
 
     }
-
-
 }
 
 // const connection = {};
@@ -34,7 +32,6 @@ export default async function connect() {
 //         if (connection.isConnected === 1) {
 //             return;
 //         }
-//         await mongoose.disconnect();
 //     }
 //     const db = await mongoose.connect('mongodb://localhost:27017/ecommerce_b');
 //     connection.isConnected = db.connections[0].readyState;
