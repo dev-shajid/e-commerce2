@@ -1,6 +1,6 @@
 
 import { NextResponse } from "next/server";
-import verifyToken from "./lib/verifyToken";
+import verifyToken from "./src/lib/verifyToken";
 
 export default async function middleware(req) {
     let path = req.nextUrl.pathname
